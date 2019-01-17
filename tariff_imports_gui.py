@@ -150,7 +150,7 @@ def go():
     nums = ''.join(raw_nums.encode('utf-8')).split()
     nums = [re.sub(r'[^A-Za-z0-9]+', '', x) for x in nums]
     if len(nums) == 0:
-        nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        nums = map(str, range(10))
     df = create_df(nums)
     write_csv(df)
     group_data(df)
