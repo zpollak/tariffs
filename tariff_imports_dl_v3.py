@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-import sys
-import os
-import requests
-import pandas as pd
 import ast
 import datetime
+import os
+import pandas as pd
+import requests
+import sys
 
 INSTRUCTIONS = '''
 INSTRUCTIONS:
@@ -138,7 +138,7 @@ def main():
     print('Please enter the HTS codes and/or prefixes:')
     nums = [str(x) for x in raw_input().split()]
     if len(nums) == 0:
-        nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        nums = map(str, range(10))
     df = create_df(nums)
     write_csv(df)
     group_data(df)
