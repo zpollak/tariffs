@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
 from __future__ import print_function
-import sys
-import os
-import re
-import requests
-import pandas as pd
 import ast
 import datetime
+import os
+import pandas as pd
+import re
+import requests
+import sys
 import Tkinter as tk
 import tkMessageBox
 
